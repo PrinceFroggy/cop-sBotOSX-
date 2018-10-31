@@ -41,7 +41,7 @@ class loginViewController: NSViewController {
     
     override func viewWillAppear()
     {
-        self.view.window?.title = "sBot: login"
+        self.view.window?.title = "cop: login"
         
         self.view.window?.styleMask.remove(.fullScreen)
         self.view.window?.styleMask.remove(.miniaturizable)
@@ -124,6 +124,6 @@ class loginViewController: NSViewController {
     
     @IBAction func paypalButtonPressed(_ sender: NSButton)
     {
-        NSWorkspace.shared.open(NSURL(string: "https://www.paypal.me/AndrewSolesa/50USD")! as URL)
+        NSWorkspace.shared.open(NSURL(string: "https://www.paypal.me/AndrewSolesa/35USD")! as URL)
     }
 }

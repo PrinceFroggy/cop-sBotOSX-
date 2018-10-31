@@ -38,7 +38,7 @@ class settingsViewController: NSViewController {
     
     override func viewWillAppear()
     {
-        self.view.window?.title = "sBot: settings"
+        self.view.window?.title = "cop: settings"
         
         self.view.window?.styleMask.remove(.closable)
         self.view.window?.styleMask.remove(.fullScreen)

@@ -50,7 +50,7 @@ class ViewController: NSViewController {
 
     override func viewWillAppear()
     {
-        self.view.window?.title = "sBot"
+        self.view.window?.title = "cop"
         
         self.view.window?.styleMask.remove(.fullScreen)
         self.view.window?.styleMask.remove(.miniaturizable)

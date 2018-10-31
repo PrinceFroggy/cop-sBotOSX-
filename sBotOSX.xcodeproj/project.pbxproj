@@ -10,7 +10,7 @@
 		1F045CC81DBAEBA20EFB05A3 /* Pods_sBotOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD42519782EB681B495F7BF4 /* Pods_sBotOSX.framework */; };
 		49F7416B2184EA430005EB65 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F741692184EA430005EB65 /* loginViewController.swift */; };
 		49F74170218637070005EB65 /* SharingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F7416F218637070005EB65 /* SharingManager.swift */; };
-		49F7417221877FA60005EB65 /* triangle.icns in Resources */ = {isa = PBXBuildFile; fileRef = 49F7417121877FA30005EB65 /* triangle.icns */; };
+		49F7417A218A3FE70005EB65 /* triangle.icns in Resources */ = {isa = PBXBuildFile; fileRef = 49F74179218A3FE70005EB65 /* triangle.icns */; };
 		49F9C884218172B00045994C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F9C883218172B00045994C /* AppDelegate.swift */; };
 		49F9C886218172B00045994C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F9C885218172B00045994C /* ViewController.swift */; };
 		49F9C888218172B90045994C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49F9C887218172B90045994C /* Assets.xcassets */; };
@@ -21,7 +21,7 @@
 /* Begin PBXFileReference section */
 		49F741692184EA430005EB65 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		49F7416F218637070005EB65 /* SharingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingManager.swift; sourceTree = "<group>"; };
-		49F7417121877FA30005EB65 /* triangle.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = triangle.icns; sourceTree = "<group>"; };
+		49F74179218A3FE70005EB65 /* triangle.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = triangle.icns; sourceTree = "<group>"; };
 		49F9C880218172B00045994C /* sBotOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sBotOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49F9C883218172B00045994C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49F9C885218172B00045994C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 		49F9C882218172B00045994C /* sBotOSX */ = {
 			isa = PBXGroup;
 			children = (
-				49F7417121877FA30005EB65 /* triangle.icns */,
+				49F74179218A3FE70005EB65 /* triangle.icns */,
 				49F9C883218172B00045994C /* AppDelegate.swift */,
 				49F9C885218172B00045994C /* ViewController.swift */,
 				49F9C887218172B90045994C /* Assets.xcassets */,
@@ -165,7 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49F9C888218172B90045994C /* Assets.xcassets in Resources */,
-				49F7417221877FA60005EB65 /* triangle.icns in Resources */,
+				49F7417A218A3FE70005EB65 /* triangle.icns in Resources */,
 				49F9C88B218172B90045994C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
