@@ -78,6 +78,9 @@ class loginViewController: NSViewController {
                 
                 print("--------------------")
                 
+                // SINCE THIS APP IS NOW FREE...
+                matchedSerial = true
+                
                 if matchedSerial
                 {
                     print("Matched serial from github = \(returnSerialNumber()!)")
@@ -116,7 +119,7 @@ class loginViewController: NSViewController {
     @IBAction func helpButtonPressed(_ sender: NSButton)
     {
         let alert = NSAlert()
-        alert.messageText = "The serial should be copied to your clipboard! Send it as a message when purchasing subscription through paypal. Please email toastpls@gmail.com your serial if you cannot send through paypal alongside with the proof of purchase."
+        alert.messageText = "The serial should be copied to your clipboard! Send it as a message when purchasing subscription through paypal. Please email asolesa@yahoo.ca your serial if you cannot send through paypal alongside with the proof of purchase."
         alert.alertStyle = .informational
         alert.addButton(withTitle: "OK")
         alert.runModal()
@@ -124,6 +127,6 @@ class loginViewController: NSViewController {
     
     @IBAction func paypalButtonPressed(_ sender: NSButton)
     {
-        NSWorkspace.shared.open(NSURL(string: "https://www.paypal.me/AndrewSolesa/35USD")! as URL)
+        NSWorkspace.shared.open(NSURL(string: "https://www.paypal.me/AndrewSolesa/50USD")! as URL)
     }
 }
