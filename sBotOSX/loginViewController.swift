@@ -127,6 +127,6 @@ class loginViewController: NSViewController {
     
     @IBAction func paypalButtonPressed(_ sender: NSButton)
     {
-        NSWorkspace.shared.open(NSURL(string: "https://www.paypal.me/AndrewSolesa/50USD")! as URL)
+        NSWorkspace.shared.open(NSURL(string: "https://www.paypal.me/AndrewSolesa/")! as URL)
     }
 }
