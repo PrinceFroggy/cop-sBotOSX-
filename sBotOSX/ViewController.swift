@@ -321,6 +321,8 @@ class ViewController: NSViewController {
             if (!self.heartBeat) { print("Stopping"); return }
             
             var foundItemColor = 0
+            var countColors = 1
+            var foundItemColorBool = false
             
             for countColor in 0..<self.countColorTotal
             {
@@ -345,6 +347,8 @@ class ViewController: NSViewController {
                             
                             if formattedItemColor.range(of: wishListItemColor) != nil
                             {
+                                foundItemColorBool = true
+                                
                                 print("Found color: \(formattedItemColor)")
                                 
                                 if (!self.heartBeat) { print("Stopping"); return }
@@ -376,7 +380,14 @@ class ViewController: NSViewController {
                                 }
                             }
                             
+                            if (countColors == self.countColorTotal && !foundItemColorBool)
+                            {
+                                print("DIDNT FIND COLOR")
+                                self.stopBot()
+                            }
+                            
                             foundItemColor += 1
+                            countColors += 1
                         }
                     }
                 })
@@ -430,6 +441,11 @@ class ViewController: NSViewController {
                             if (foundItemSize)
                             {
                                 self.AI_FifthStep_AddItem()
+                            }
+                            else
+                            {
+                                print("DIDNT FIND SIZE")
+                                self.stopBot()
                             }
                         })
                     }
