@@ -321,7 +321,6 @@ class ViewController: NSViewController {
             if (!self.heartBeat) { print("Stopping"); return }
             
             var foundItemColor = 0
-            var countColors = 1
             var foundItemColorBool = false
             
             for countColor in 0..<self.countColorTotal
@@ -380,14 +379,13 @@ class ViewController: NSViewController {
                                 }
                             }
                             
-                            if (countColors == self.countColorTotal && !foundItemColorBool)
+                            if (countColor + 1 == self.countColorTotal && !foundItemColorBool)
                             {
                                 print("DIDNT FIND COLOR")
                                 self.stopBot()
                             }
                             
                             foundItemColor += 1
-                            countColors += 1
                         }
                     }
                 })
