@@ -452,9 +452,7 @@ class ViewController: NSViewController {
     }
     
     func AI_FifthStep_AddItem()
-    {
-        //CBF TO ADD SOLD OUT CHECK AS ITS DO OR DIE LMFAO
-        
+    {   
         DispatchQueue.main.async
         {
             if (!self.heartBeat) { print("Stopping"); return }
