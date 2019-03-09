@@ -16,6 +16,7 @@ class SharingManager
     var address = ""
     var apt = ""
     var zip = ""
+    var country = ""
     var city = ""
     var state = ""
     

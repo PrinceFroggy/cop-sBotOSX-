@@ -99,6 +99,7 @@ class ViewController: NSViewController {
                 print("telephone = \(SharingManager.sharedInstance.telephone)")
                 print("address = \(SharingManager.sharedInstance.address)")
                 print("apt = \(SharingManager.sharedInstance.apt)")
+                print("country = \(SharingManager.sharedInstance.country)")
                 print("zip = \(SharingManager.sharedInstance.zip)")
                 print("city = \(SharingManager.sharedInstance.city)")
                 print("state = \(SharingManager.sharedInstance.state)")
@@ -426,9 +427,11 @@ class ViewController: NSViewController {
                             
                                         foundItemSize = true
                             
-                                        let itemSizeValue = itemSize["value"]
+                                        //let itemSizeValue = itemSize["value"]
                             
-                                        self.supremeWKWebView.evaluateJavaScript("document.getElementById(\"size-options\").value = \(itemSizeValue!)", completionHandler: nil)
+                                        self.supremeWKWebView.evaluateJavaScript("let options = Array.prototype.slice.call(document.querySelectorAll('#size-options > option')); let size = options.filter(function(item){ return item.textContent === '\(itemSize.text!)'; }); $('#size-options').val(size[0].value).change();", completionHandler: nil)
+                                        
+                                        //self.supremeWKWebView.evaluateJavaScript("document.getElementById(\"size-options\").value = \(itemSizeValue!)", completionHandler: nil)
                             
                                         break
                                         
@@ -493,6 +496,8 @@ class ViewController: NSViewController {
                     {
                         if (!self.heartBeat) { print("Stopping"); return }
                         
+                        self.supremeWKWebView.evaluateJavaScript("$(\"#order_billing_country\").val(\"\(SharingManager.sharedInstance.country)\").change();", completionHandler: nil)
+                        
                         self.supremeWKWebView.evaluateJavaScript("document.getElementById(\"order_billing_name\").value = \"\(SharingManager.sharedInstance.name)\"", completionHandler: nil)
             
                         self.supremeWKWebView.evaluateJavaScript("document.getElementById(\"order_email\").value = \"\(SharingManager.sharedInstance.email)\"", completionHandler: nil)
@@ -507,14 +512,20 @@ class ViewController: NSViewController {
             
                         self.supremeWKWebView.evaluateJavaScript("document.getElementById(\"order_billing_city\").value = \"\(SharingManager.sharedInstance.city)\"", completionHandler: nil)
             
-                        self.supremeWKWebView.evaluateJavaScript("document.getElementById(\"order_billing_state\").value = \"\(SharingManager.sharedInstance.state)\"; document.getElementById(\"order_billing_state\").dispatchEvent(new Event('change'));", completionHandler: nil)
+                        self.supremeWKWebView.evaluateJavaScript("$(\"#order_billing_state\").val(\"\(SharingManager.sharedInstance.state)\").change();", completionHandler: nil)
             
+                        //self.supremeWKWebView.evaluateJavaScript("document.getElementById(\"order_billing_state\").value = \"\(SharingManager.sharedInstance.state)\"; document.getElementById(\"order_billing_state\").dispatchEvent(new Event('change'));", completionHandler: nil)
+                        
                         self.supremeWKWebView.evaluateJavaScript("document.getElementById(\"credit_card_n\").value = \"\(SharingManager.sharedInstance.number)\"", completionHandler: nil)
             
-                        self.supremeWKWebView.evaluateJavaScript("document.getElementById(\"credit_card_month\").value = \"\(SharingManager.sharedInstance.expMonth)\"; document.getElementById(\"credit_card_month\").dispatchEvent(new Event('change'));", completionHandler: nil)
+                        self.supremeWKWebView.evaluateJavaScript("$(\"#credit_card_month\").val(\"\(SharingManager.sharedInstance.expMonth)\").change();", completionHandler: nil)
             
-                        self.supremeWKWebView.evaluateJavaScript("document.getElementById(\"credit_card_year\").value = \"\(SharingManager.sharedInstance.expYear)\"; document.getElementById(\"credit_card_year\").dispatchEvent(new Event('change'));", completionHandler: nil)
+                        self.supremeWKWebView.evaluateJavaScript("$(\"#credit_card_year\").val(\"\(SharingManager.sharedInstance.expYear)\").change();", completionHandler: nil)
             
+                        //self.supremeWKWebView.evaluateJavaScript("document.getElementById(\"credit_card_month\").value = \"\(SharingManager.sharedInstance.expMonth)\"; document.getElementById(\"credit_card_month\").dispatchEvent(new Event('change'));", completionHandler: nil)
+                        
+                        //self.supremeWKWebView.evaluateJavaScript("document.getElementById(\"credit_card_year\").value = \"\(SharingManager.sharedInstance.expYear)\"; document.getElementById(\"credit_card_year\").dispatchEvent(new Event('change'));", completionHandler: nil)
+                        
                         self.supremeWKWebView.evaluateJavaScript("document.getElementById(\"cav\").value = \"\(SharingManager.sharedInstance.cvv)\"", completionHandler: nil)
             
                         self.supremeWKWebView.evaluateJavaScript("document.getElementById(\"order_terms\").click()", completionHandler: nil)

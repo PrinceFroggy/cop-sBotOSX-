@@ -16,6 +16,7 @@ class settingsViewController: NSViewController {
     @IBOutlet weak var addressTextField: NSTextField!
     @IBOutlet weak var aptTextField: NSTextField!
     @IBOutlet weak var zipTextField: NSTextField!
+    @IBOutlet weak var countryComboBox: NSComboBox!
     @IBOutlet weak var cityTextField: NSTextField!
     @IBOutlet weak var stateComboBox: NSComboBox!
 
@@ -66,6 +67,7 @@ class settingsViewController: NSViewController {
         SharingManager.sharedInstance.address = addressTextField.stringValue
         SharingManager.sharedInstance.apt = aptTextField.stringValue
         SharingManager.sharedInstance.zip = zipTextField.stringValue
+        SharingManager.sharedInstance.country = countryComboBox.stringValue
         SharingManager.sharedInstance.city = cityTextField.stringValue
         SharingManager.sharedInstance.state = stateComboBox.stringValue
 
